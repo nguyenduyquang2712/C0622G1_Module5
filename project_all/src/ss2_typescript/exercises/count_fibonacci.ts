@@ -10,13 +10,13 @@ let checkFibonacci = function (num: number): number {
     return checkFibonacci(num - 1) + checkFibonacci(num - 2);
 }
 
-let sum: number = 0;
+let sumFibonacci: number = 0;
 let amountNumber: number = 10;
 let arr: Array<number> = [];
 for (let i = 0; i < amountNumber; i++) {
     arr.push(checkFibonacci(i))
-    sum += checkFibonacci(i);
+    sumFibonacci += checkFibonacci(i);
 }
 
 console.log(amountNumber + "số fibonacci đâu tiên: " + arr);
-console.log("Tổng " + amountNumber + " số fibonacci đầu tiên: " + sum);
+console.log("Tổng " + amountNumber + " số fibonacci đầu tiên: " + sumFibonacci);
