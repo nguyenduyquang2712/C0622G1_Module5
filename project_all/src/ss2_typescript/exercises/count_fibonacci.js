@@ -8,7 +8,7 @@ var checkFibonacci = function (num) {
     return checkFibonacci(num - 1) + checkFibonacci(num - 2);
 };
 var sum = 0;
-var amountNumber = 7;
+var amountNumber = 10;
 var arr = [];
 for (var i = 0; i < amountNumber; i++) {
     arr.push(checkFibonacci(i));
