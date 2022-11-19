@@ -11,7 +11,7 @@ let checkFibonacci = function (num: number): number {
 }
 
 let sumFibonacci: number = 0;
-let amountNumber: number = 10;
+let amountNumber: number = 6;
 let arr: Array<number> = [];
 for (let i = 0; i < amountNumber; i++) {
     arr.push(checkFibonacci(i))
