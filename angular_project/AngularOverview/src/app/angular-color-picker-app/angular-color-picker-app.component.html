@@ -1,0 +1,13 @@
+<div>
+  <fieldset>
+    <legend><h3>Color Picker</h3></legend>
+    <div>
+      <label style="font-weight: bold">Color Picker</label><br>
+      <input [(ngModel)]="value1" type="range" min="0" max="255" (change)="onChange();rgbToHex(value1, value2, value3)"> <br>
+      <input [(ngModel)]="value2" type="range" min="0" max="255" (change)="onChange();rgbToHex(value1, value2, value3)"> <br>
+      <input [(ngModel)]="value3" type="range" min="0" max="255" (change)="onChange();rgbToHex(value1, value2, value3)"> <br>
+    </div>
+  </fieldset>
+</div> <br>
+<div style="width: 100px;height: 100px" [style.background-color]="background"></div>
+<p>{{valueHex}}</p>
