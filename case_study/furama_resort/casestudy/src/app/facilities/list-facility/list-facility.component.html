@@ -1,0 +1,62 @@
+<div style="min-height: 55vh">
+  <div style="text-align: center;margin: 5px">
+    <h1>List Facility</h1>
+
+    <a href="/facilities/create">
+      <button style="margin: 10px" type="button" class="btn btn-info">Add New Facility</button>
+    </a>
+
+    <form action="/facilities">
+      <input type="text" name="nameSearch" placeholder="Search name">
+      <select name="facilityType">
+        <option value="" selected>Type</option>
+        <option value=""></option>
+      </select>
+      <input type="submit" value="Search">
+    </form>
+  </div>
+  <table class="table table-dark" style="text-align: center" border="1">
+    <thead>
+    <tr>
+      <th>STT</th>
+      <th>Name</th>
+      <th>Area</th>
+      <th>Price</th>
+      <th>Max People</th>
+      <th>Standard Room</th>
+      <th>Description Other Convenience</th>
+      <th>Pool Area</th>
+      <th>Floors</th>
+      <th>Facility Free</th>
+      <th>Rent Type</th>
+      <th>Facility Type</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>STT</td>
+      <td>facility name</td>
+      <td>facility area}</td>
+      <td>facility cost</td>
+      <td>facility maxPeople</td>
+      <td>facility standardRoom</td>
+      <td>facility descriptionOtherConvenience</td>
+      <td>facility poolArea</td>
+      <td>facility numberOfFloors</td>
+      <td>facility facilityFree</td>
+      <td>facility rentTypeName</td>
+      <td>facility facilityTypeName</td>
+      <td><a class="btn btn-danger">edit</a></td>
+      <td>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary">
+          Delete
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
