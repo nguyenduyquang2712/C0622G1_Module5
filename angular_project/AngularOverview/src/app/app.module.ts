@@ -9,6 +9,8 @@ import { ArticleComponent } from './ss4_angular_template/article/article.compone
 import { LikeComponent } from './ss4_angular_template/like/like.component';
 import { NavbarComponent } from './ss4_angular_template/navbar/navbar.component';
 import { FooterComponent } from './ss4_angular_template/footer/footer.component';
+import { RatingbarComponent } from './ss5_components_interaction/exercices/vote_app/ratingbar/ratingbar.component';
+import { CountDownTimerComponent } from './ss5_components_interaction/exercices/count_down/count-down-timer/count-down-timer.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { FooterComponent } from './ss4_angular_template/footer/footer.component'
     LikeComponent,
     NavbarComponent,
     FooterComponent,
+    RatingbarComponent,
+    CountDownTimerComponent,
   ],
   imports: [
     BrowserModule,
