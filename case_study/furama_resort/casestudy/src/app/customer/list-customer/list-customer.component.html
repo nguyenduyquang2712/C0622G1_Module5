@@ -1,16 +1,14 @@
-<div class="p-3">
+<div class="p-3 " style="min-height: 58vh">
   <h2 class="text-center fw-bold text-dark my-3">DANH SÁCH KHÁCH HÀNG</h2>
 
 
-  <nav class="navbar navbar-expand-lg py-0 my-0">
-    <div class="container-fluid">
       <a href="#">
         <button class="btn btn-primary btn-outline-secondary btn-sm">
           <span class="fa-solid fa-person-circle-plus text-light h5 my-auto me-1"></span>
           <span class="text-light"> Thêm mới khách hàng</span>
         </button>
       </a>
-
+  <div>
       <form class="d-flex my-2" role="search" action="#">
         <input class="form-control me-2" type="text" placeholder="Nhập tên.." aria-label="Search"
                name="nameSearch">
@@ -24,11 +22,10 @@
           <i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
     </div>
-  </nav>
 
-  <table class="table table-light table-striped table-bordered">
-    <tr class=" table-dark text-light">
-      <th class="text-center"><i class=" fa fa-sharp fa-solid fa-bolt"></i></th>
+  <table class="table table-striped table-customer">
+    <tr class="bg-dark text-light border-black">
+      <th class="text-center text-light"><i class="fa-sharp fa-solid fa-bolt"></i></th>
       <th>Tên khách hàng</th>
       <th>Ngày sinh</th>
       <th>Giới tính</th>
@@ -56,26 +53,67 @@
       <td>customerTypeName</td>
 
       <td class="text-center">
-        <button
-          class="btn btn-warning btn-outline-secondary btn-sm">
-          <span class=" fa fa-solid fa-user text-light h6 m-auto px-2"></span>
+        <a href="#">
+        <button class="btn btn-warning " style="margin-top: 5px;margin-bottom: 5px">
+          <i class=" fa-solid fa-user text-light h6 m-auto px-2" style="margin-top: 10px"></i>
         </button>
+        </a>
       </td>
 
       <td class="text-center">
-        <a href="#">
-          <button class="btn btn-success btn-outline-secondary btn-sm">
-            <span class=" fa fa-solid fa-user-pen text-light h6 m-auto px-2"></span>
+        <a>
+          <button class="btn btn-success " style="margin-top: 5px;margin-bottom: 5px">
+            <i class="fa-solid fa-user-pen text-light h6 m-auto px-2"></i>
           </button>
         </a>
       </td>
 
       <td class="text-center">
-        <button class="btn btn-danger btn-outline-secondary btn-sm">
-          <span class=" fa fa-solid fa-person-circle-minus text-light h6 m-auto px-2"></span>
+        <a  href="#">
+        <button  class="btn btn-danger  " style="margin-top: 5px;margin-bottom: 5px">
+          <i class="fa-solid fa-person-circle-minus text-light h6 m-auto px-2"></i>
         </button>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-center"></td>
+
+      <td>Name</td>
+
+      <td>customerBirthday</td>
+
+      <td>Gioi tinh</td>
+
+      <td>customerPhone</td>
+
+      <td>customerAddress</td>
+
+      <td>customerTypeName</td>
+
+      <td class="text-center">
+        <a href="#">
+        <button class="btn btn-warning " style="margin-top: 5px;margin-bottom: 5px">
+          <i class=" fa-solid fa-user text-light h6 m-auto px-2" style="margin-top: 10px"></i>
+        </button>
+        </a>
+      </td>
+
+      <td class="text-center">
+        <a>
+          <button class="btn btn-success " style="margin-top: 5px;margin-bottom: 5px">
+            <i class="fa-solid fa-user-pen text-light h6 m-auto px-2"></i>
+          </button>
+        </a>
+      </td>
+
+      <td class="text-center">
+        <a  href="#">
+        <button  class="btn btn-danger  " style="margin-top: 5px;margin-bottom: 5px">
+          <i class="fa-solid fa-person-circle-minus text-light h6 m-auto px-2"></i>
+        </button>
+        </a>
       </td>
     </tr>
   </table>
-
 </div>
