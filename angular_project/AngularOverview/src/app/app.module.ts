@@ -12,6 +12,8 @@ import { RatingbarComponent } from './ss5_components_interaction/exercices/vote_
 import { CountDownTimerComponent } from './ss5_components_interaction/exercices/count_down/count-down-timer/count-down-timer.component';
 import { RegisterComponentComponent } from './ss6_angular_form/exercises/register-component/register-component.component';
 import { LoginComponentComponent } from './ss6_angular_form/exercises/login-component/login-component.component';
+import { DintionaryPageComponent } from './ss7_service_router/exercises/dictionary/dintionary-page/dintionary-page.component';
+import { DintionaryDetailComponent } from './ss7_service_router/exercises/dictionary/dintionary-detail/dintionary-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { LoginComponentComponent } from './ss6_angular_form/exercises/login-comp
     CountDownTimerComponent,
     RegisterComponentComponent,
     LoginComponentComponent,
+    DintionaryPageComponent,
+    DintionaryDetailComponent,
   ],
   imports: [
     BrowserModule,
