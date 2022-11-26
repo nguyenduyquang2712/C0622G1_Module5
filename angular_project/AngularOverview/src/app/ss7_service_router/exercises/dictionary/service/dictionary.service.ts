@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {IWord} from "./model/iword";
+import {IWord} from "../model/iword";
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +20,9 @@ export class DictionaryService {
 
   set words(value: IWord[]) {
     this._words = value;
+  }
+  getAll(){
+    return this._words;
   }
   getMeanWordByIndex(index:number){
     return this._words[index];

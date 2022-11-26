@@ -12,8 +12,15 @@ import { RatingbarComponent } from './ss5_components_interaction/exercices/vote_
 import { CountDownTimerComponent } from './ss5_components_interaction/exercices/count_down/count-down-timer/count-down-timer.component';
 import { RegisterComponentComponent } from './ss6_angular_form/exercises/register-component/register-component.component';
 import { LoginComponentComponent } from './ss6_angular_form/exercises/login-component/login-component.component';
-import { DintionaryPageComponent } from './ss7_service_router/exercises/dictionary/dintionary-page/dintionary-page.component';
-import { DintionaryDetailComponent } from './ss7_service_router/exercises/dictionary/dintionary-detail/dintionary-detail.component';
+import { ProductCreateComponent } from './ss7_service_router/exercises/product_management/product/product-create/product-create.component';
+import { ProductListComponent } from './ss7_service_router/exercises/product_management/product/product-list/product-list.component';
+import {ProductRoutingModule} from "./ss7_service_router/exercises/product_management/product-routing.module";
+import {RouterModule} from "@angular/router";
+import { ProductEditComponent } from './ss7_service_router/exercises/product_management/product/product-edit/product-edit.component';
+import { ProductDeleteComponent } from './ss7_service_router/exercises/product_management/product/product-delete/product-delete.component';
+import { DictionaryPageComponent } from './ss7_service_router/exercises/dictionary/dictionary-page/dictionary-page.component';
+import { DictionaryDetailComponent } from './ss7_service_router/exercises/dictionary/dictionary-detail/dictionary-detail.component';
+import {DictionaryRoutingModule} from "./ss7_service_router/exercises/dictionary/dictionary-routing.module";
 
 @NgModule({
   declarations: [
@@ -28,13 +35,20 @@ import { DintionaryDetailComponent } from './ss7_service_router/exercises/dictio
     CountDownTimerComponent,
     RegisterComponentComponent,
     LoginComponentComponent,
-    DintionaryPageComponent,
-    DintionaryDetailComponent,
+    ProductCreateComponent,
+    ProductListComponent,
+    ProductEditComponent,
+    ProductDeleteComponent,
+    DictionaryPageComponent,
+    DictionaryDetailComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    // ProductRoutingModule,
+    DictionaryRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
