@@ -46,8 +46,8 @@ import {DictionaryRoutingModule} from "./ss7_service_router/exercises/dictionary
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    // ProductRoutingModule,
-    DictionaryRoutingModule,
+    ProductRoutingModule,
+    // DictionaryRoutingModule,
     RouterModule
   ],
   providers: [],

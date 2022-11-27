@@ -56,8 +56,9 @@ export class ProductService {
   }
 
   deleteProduct(id: number) {
-    this.products = this.products.filter(product => {
-      return product.id !== id;
-    });
+    this.products.splice(id,1)
+    // this.products = this.products.filter(product => {
+    //   return product.id !== id;
+    // });
   }
 }

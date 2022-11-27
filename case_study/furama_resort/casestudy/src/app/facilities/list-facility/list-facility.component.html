@@ -35,22 +35,21 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <td>STT</td>
-      <td>facility name</td>
-      <td>facility area}</td>
-      <td>facility cost</td>
-      <td>facility maxPeople</td>
-      <td>facility standardRoom</td>
-      <td>facility descriptionOtherConvenience</td>
-      <td>facility poolArea</td>
-      <td>facility numberOfFloors</td>
-      <td>facility facilityFree</td>
-      <td>facility rentTypeName</td>
-      <td>facility facilityTypeName</td>
+    <tr *ngFor="let item of facilities; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.area}}</td>
+      <td>{{item.cost}}</td>
+      <td>{{item.maxPeople}}</td>
+      <td>{{item.standardRoom}}</td>
+      <td>{{item.descriptionOfOtherConvenience}}</td>
+      <td>{{item.poolArea}}</td>
+      <td>{{item.numberOfFloors}}</td>
+      <td>{{item.facilityFree}}</td>
+      <td>{{item.rentType}}</td>
+      <td>{{item.facilityType}}</td>
       <td><a class="btn btn-danger">edit</a></td>
       <td>
-        <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary">
           Delete
         </button>
