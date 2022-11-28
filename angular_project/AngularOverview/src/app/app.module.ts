@@ -21,6 +21,8 @@ import { ProductDeleteComponent } from './ss7_service_router/exercises/product_m
 import { DictionaryPageComponent } from './ss7_service_router/exercises/dictionary/dictionary-page/dictionary-page.component';
 import { DictionaryDetailComponent } from './ss7_service_router/exercises/dictionary/dictionary-detail/dictionary-detail.component';
 import {DictionaryRoutingModule} from "./ss7_service_router/exercises/dictionary/dictionary-routing.module";
+import {HttpClientModule} from "@angular/common/http";
+import { TodoComponent } from './ss9_connect_backend/exercises/todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import {DictionaryRoutingModule} from "./ss7_service_router/exercises/dictionary
     ProductDeleteComponent,
     DictionaryPageComponent,
     DictionaryDetailComponent,
+    TodoComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import {DictionaryRoutingModule} from "./ss7_service_router/exercises/dictionary
     ReactiveFormsModule,
     ProductRoutingModule,
     // DictionaryRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "iphone 1200000",
+      "price": 2000,
+      "description": "tham hoa",
+      "category": {
+        "id": 2,
+        "name": "Samsung"
+      }
+    },
+    {
+      "id": 4,
+      "name": "iphone123",
+      "price": 10000,
+      "description": "ko co pin",
+      "category": {
+        "id": 1,
+        "name": "iphone"
+      }
+    },
+    {
+      "id": 5,
+      "name": "iphone124",
+      "price": 12555,
+      "description": "tham hoa",
+      "category": {
+        "id": 3,
+        "name": "Nokia"
+      }
+    },
+    {
+      "id": 6,
+      "name": "NOKIA12",
+      "price": 1200,
+      "description": "tham hoa",
+      "category": {
+        "id": 2,
+        "name": "Samsung"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "iphone"
+    },
+    {
+      "id": 2,
+      "name": "Samsung"
+    },
+    {
+      "id": 3,
+      "name": "Nokia"
+    }
+  ]
+}

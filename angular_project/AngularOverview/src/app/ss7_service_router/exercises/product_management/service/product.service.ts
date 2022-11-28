@@ -1,64 +1,38 @@
 import {Injectable} from '@angular/core';
 import {Product} from '../model/product';
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
+import {environment} from "../../../../../environments/environment";
+import {Category} from "../model/category";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  products: Product[] = [{
-    id: 1,
-    name: 'IPhone 12',
-    price: 2400000,
-    description: 'New'
-  }, {
-    id: 2,
-    name: 'IPhone 11',
-    price: 1560000,
-    description: 'Like new'
-  }, {
-    id: 3,
-    name: 'IPhone X',
-    price: 968000,
-    description: '97%'
-  }, {
-    id: 4,
-    name: 'IPhone 8',
-    price: 7540000,
-    description: '98%'
-  }, {
-    id: 5,
-    name: 'IPhone 11 Pro',
-    price: 1895000,
-    description: 'Like new'
-  }];
 
-  constructor() {
+  constructor(private _httpClient:HttpClient) {
   }
 
-  getAll() {
-    return this.products;
+  findAll():Observable<Product[]> {
+    return this._httpClient.get<Product[]>(environment.api_url_product);
+
+  }
+findAllCategory():Observable<Category[]>{
+    return this._httpClient.get<Category[]>(environment.api_url_category);
+}
+  saveProduct(product:Product):Observable<Product> {
+    return this._httpClient.post<Product>(environment.api_url_product,product);
   }
 
-  saveProduct(product) {
-    this.products.push(product);
+  findById(id: number):Observable<Product> {
+    return this._httpClient.get<Product>(environment.api_url_product+"/"+id);
   }
 
-  findById(id: number) {
-    return this.products.find(product => product.id === id);
+  updateProduct(id: number, product: Product):Observable<Product> {
+    return this._httpClient.put<Product>(environment.api_url_product+"/"+id,product)
   }
 
-  updateProduct(id: number, product: Product) {
-    for (let i = 0; i < this.products.length; i++) {
-      if (this.products[i].id === id) {
-        this.products[i] = product;
-      }
-    }
-  }
-
-  deleteProduct(id: number) {
-    this.products.splice(id,1)
-    // this.products = this.products.filter(product => {
-    //   return product.id !== id;
-    // });
+  deleteProduct(id: number):Observable<Product> {
+      return this._httpClient.delete<Product>(environment.api_url_product+"/"+id);
   }
 }
