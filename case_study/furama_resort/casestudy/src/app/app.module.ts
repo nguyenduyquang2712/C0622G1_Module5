@@ -13,6 +13,14 @@ import { EditCustomerComponent } from './customer/edit-customer/edit-customer.co
 import { CreateCustomerComponent } from './customer/create-customer/create-customer.component';
 import { ListContractComponent } from './contract/list-contract/list-contract.component';
 import { CreateContractComponent } from './contract/create-contract/create-contract.component';
+import { HomeComponent } from './home/home.component';
+import {RouterModule} from "@angular/router";
+import {FuramaRoutingModule} from "./furama-routing.module";
+import {HttpClientModule} from "@angular/common/http";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ToastrModule} from "ngx-toastr";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -28,9 +36,18 @@ import { CreateContractComponent } from './contract/create-contract/create-contr
     CreateCustomerComponent,
     ListContractComponent,
     CreateContractComponent,
+    HomeComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule,
+    HttpClientModule,
+    FuramaRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

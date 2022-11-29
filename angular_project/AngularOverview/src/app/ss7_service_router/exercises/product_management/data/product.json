@@ -39,6 +39,16 @@
         "id": 2,
         "name": "Samsung"
       }
+    },
+    {
+      "id": 7,
+      "name": "IphoneX",
+      "price": 1222,
+      "description": "hay",
+      "category": {
+        "id": 1,
+        "name": "iphone"
+      }
     }
   ],
   "categories": [
