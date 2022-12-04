@@ -64,4 +64,12 @@ export class FacilityService {
   saveFacility(facility: Facility):Observable<Facility> {
     return this._httpClient.post<Facility>('http://localhost:3000/facilities',facility);
   }
+  findFacilityById(id:number):Observable<Facility>{
+    return this._httpClient.get<Facility>('http://localhost:3000/facilities/'+id);
+  }
+
+  deleteFacility(id: number):Observable<Facility>{
+    return this._httpClient.delete<Facility>('http://localhost:3000/facilities/'+id);
+    window.location.reload();
+  }
 }

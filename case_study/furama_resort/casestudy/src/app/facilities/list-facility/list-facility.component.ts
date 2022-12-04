@@ -13,6 +13,7 @@ export class ListFacilityComponent implements OnInit {
   numberRecord :number;
   currentPage :number;
   totalPage: number;
+  deleteFacility:Facility;
 
   constructor(private _facilityService: FacilityService) {
   }
@@ -62,5 +63,17 @@ export class ListFacilityComponent implements OnInit {
         this.facilities = pagingList
       })
     });
+  }
+
+  sendToDetailModal(id: number) {
+    this._facilityService.findFacilityById(id).subscribe(data=>{
+      this.deleteFacility = data;
+    })
+  }
+
+  deleteItemFacility(id: number) {
+    this._facilityService.deleteFacility(id).subscribe(data=>{
+      console.log(data)
+    })
   }
 }

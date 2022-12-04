@@ -52,8 +52,8 @@
       <td>{{item.facilityType}}</td>
       <td><a class="btn btn-danger">edit</a></td>
       <td>
-        <button type="button" class="btn btn-primary">
-          Delete
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="sendToDetailModal(item.id)">
+          Delete Faclitity
         </button>
       </td>
     </tr>
@@ -79,5 +79,22 @@
       </li>
     </ul>
   </nav>
+  <div *ngIf="deleteFacility"  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          {{deleteFacility.name}}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="deleteItemFacility(deleteFacility.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
